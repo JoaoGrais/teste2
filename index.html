@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma / DOM</title>
+</head>
+<body>
+    <h1>Soma usando DOM</h1> 
+
+    <input type="number" name="valor1" id="valor1"> +
+    <input type="number" name="valor2" id="valor2">
+    <input type="button" value="=" onclick="somar()">
+
+    <div id="resp">Resposta</div>
+
+
+    <input type="number" name="valor3" id="valor3"> -
+    <input type="number" name="valor4" id="valor4">
+    <input type="button" value="=" onclick="subtrair()">
+
+    <div id="resp2">Resposta</div>
+    
+
+    <input type="number" name="valor5" id="valor5"> .
+    <input type="number" name="valor6" id="valor6">
+    <input type="button" value="=" onclick="produto()">
+
+    <div id="resp3">Resposta</div>
+
+    <script>
+        function somar() {
+            var v1 = window.document.getElementById('valor1');
+            var v2 = window.document.querySelector('input#valor2');
+            var resp = window.document.getElementById('resp')
+
+            var n1 = Number(v1.value);
+            var n2 = Number(v2. value);
+            var resultado = n1 + n2;
+
+            resp.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${resultado}`
+        }
+
+        function subtrair() {
+            var v3 = window.document.getElementById('valor3');
+            var v4 = window.document.querySelector('input#valor4');
+            var resp2 = window.document.getElementById('resp2')
+
+            var n3 = Number(v3.value);
+            var n4 = Number(v4.value);
+            var resultado2 = n3 - n4;
+
+            resp2.innerHTML = `A subtração entre ${n3} e ${n4} é igual a ${resultado2}`
+        }
+
+
+        function produto() {
+            var v5 = window.document.getElementById('valor5');
+            var v6 = window.document.querySelector('input#valor6');
+            var resp3 = window.document.getElementById('resp3')
+
+            var n5 = Number(v5.value);
+            var n6 = Number(v6.value);
+            var resultado3 = n5 * n6;
+
+            resp3.innerHTML = `A multiplicação entre ${n5} e ${n6} é igual a ${resultado3}`
+        }
+
+
+    </script>
+
+</body>
+</html>
